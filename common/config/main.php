@@ -3,6 +3,15 @@ return [
     'language' => 'ru-RU',
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'enableStrictParsing' => true,
+            'showScriptName' => false,
+            'suffix' => '/'
+        ],
+        'assetManager' => [
+            'linkAssets' => true
+        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],

@@ -9,17 +9,23 @@ $params = array_merge(
 return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
-    'homeUrl' => '/admin',
+    'defaultRoute' => 'admin/default/index',
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
     'modules' => [],
     'components' => [
         'request' => [
-            'baseUrl' => '/admin',
+            'cookieValidationKey' => '7fdsf%dbYd&djsb#sn0mlsfo(kj^kf98dfh',
+            'baseUrl' => '/backend'
         ],
         'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
+            'rules' => [
+                '' => 'admin/default/index',
+                '<_m>/<_c>/<_a>' => '<_m>/<_c>/<_a>'
+            ]
+        ],
+        'view' => [
+           // 'theme' => 'vova07\themes\admin\Theme'
         ],
         'user' => [
             'identityClass' => 'common\models\User',
