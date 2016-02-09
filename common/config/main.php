@@ -7,7 +7,7 @@ return [
             'enablePrettyUrl' => true,
             'enableStrictParsing' => true,
             'showScriptName' => false,
-            'suffix' => '/'
+            //'suffix' => '/'
         ],
         'assetManager' => [
             'linkAssets' => true

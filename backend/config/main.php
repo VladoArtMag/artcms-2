@@ -9,24 +9,29 @@ $params = array_merge(
 return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
-    'defaultRoute' => 'admin/default/index',
+    //'defaultRoute' => 'admin/default/index',
+   // 'defaultRoute' => 'site/index',
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
     'modules' => [],
     'components' => [
         'request' => [
-            'cookieValidationKey' => '7fdsf%dbYd&djsb#sn0mlsfo(kj^kf98dfh',
-            'baseUrl' => '/backend'
+            'cookieValidationKey' => '8fdsf%dbYd&djsb#sn0mlsfo(kj^kf98dfh',
+            'baseUrl' => '/sfera'
         ],
+            /**/
         'urlManager' => [
             'rules' => [
-                '' => 'admin/default/index',
+                '' => 'site',
+               //'/sfera' => 'sfera/default/index',
+                '<controller:\w+>/<id:\d+>' => '<controller>/view',
+                '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+
                 '<_m>/<_c>/<_a>' => '<_m>/<_c>/<_a>'
             ]
         ],
-        'view' => [
-           // 'theme' => 'vova07\themes\admin\Theme'
-        ],
+
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,

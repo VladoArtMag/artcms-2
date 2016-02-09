@@ -25,11 +25,11 @@ $baseUrl = $asset->baseUrl;
 <?php $this->beginBody() ?>
 
 <div class="wrapper">
-    <?= $this->render('header',['baseURl' => $baseUrl]) ?>
-    <?= $this->render('leftmenu',['baseURl' => $baseUrl]) ?>
+    <?= $this->render('header',['baseUrl' => $baseUrl]) ?>
+    <?= $this->render('leftmenu',['baseUrl' => $baseUrl]) ?>
     <?= $this->render('content',['content' => $content]) ?>
-    <?= $this->render('footer',['baseURl' => $baseURl]) ?>
-    <?= $this->render('rightside',['baseURl' => $baseURl]) ?>
+    <?= $this->render('footer',['baseUrl' => $baseUrl]) ?>
+    <?= $this->render('rightside',['baseUrl' => $baseUrl]) ?>
     <div class="control-sidebar-bg"></div>
 </div>
 

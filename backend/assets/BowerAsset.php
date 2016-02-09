@@ -18,8 +18,9 @@ class BowerAsset extends AssetBundle
     ];
     public $js = [
 
-        'backend/plugins/jQuery/jQuery-2.1.4.min.js',
+        //'backend/plugins/jQuery/jQuery-2.1.4.min.js',
         'backend/plugins/jqueryUi/jquery-ui.min.js',
         'backend/dist/js/app.min.js',
+        'bootstrap/dist/js/bootstrap.min.js',
      ];
 }

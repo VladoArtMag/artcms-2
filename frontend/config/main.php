@@ -9,13 +9,27 @@ $params = array_merge(
 return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
+    'defaultRoute' => 'site/index',
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
+        'request' => [
+            'cookieValidationKey' => 'sdi8s#fnj98jwiqiw;qfh!fjgh0d8f',
+            'baseUrl' => ''
+        ],
+
+        'urlManager' => [
+            'rules' => [
+                '' => 'site/index',
+                '<_a:(about|contacts|captcha)>' => 'site/default/<_a>'
+            ]
+        ],
+/*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
         ],
+        */
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,

@@ -12,10 +12,13 @@
     RewriteEngine On
 
     # Backend redirect
-    RewriteCond %{REQUEST_URI} ^/backend
-    RewriteRule ^backend/(.*)$ backend/web/$1 [L]
+    RewriteCond %{REQUEST_URI} ^/sfera
+    RewriteRule ^sfera/(.*)$ backend/web/$1 [L]
 
-
+    #RewriteCond %{REQUEST_URI} ^/backend/$
+    #RewriteRule ^(backend)/$ /$1 [R=301,L]
+    #RewriteCond %{REQUEST_URI} ^/backend
+    #RewriteRule ^backend(/.+)?$ /backend/web/$1 [L,PT]
 
     # Frontend redirect
     RewriteCond %{REQUEST_URI} ^(.*)$
