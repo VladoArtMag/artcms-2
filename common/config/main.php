@@ -1,5 +1,6 @@
 <?php
 return [
+    'name' => 'new_b2',
     'language' => 'ru-RU',
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
