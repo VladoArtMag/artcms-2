@@ -23,11 +23,9 @@ return [
         'urlManager' => [
             'rules' => [
                 '' => 'site',
-               //'/sfera' => 'sfera/default/index',
                 '<controller:\w+>/<id:\d+>' => '<controller>/view',
                 '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
-
                 '<_m>/<_c>/<_a>' => '<_m>/<_c>/<_a>'
             ]
         ],
