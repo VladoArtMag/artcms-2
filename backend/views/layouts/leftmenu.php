@@ -29,14 +29,28 @@ use yii\helpers\Html;
         <!-- /.search form -->
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
-            <li class="header">Роли</li>
+            <li class="header">Админ</li>
             <li class="active treeview">
                 <a href="#">
-                    <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
+                    <i class="fa fa-dashboard"></i> <span>Управление</span> <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="active"><a href="admin/menu"><i class="fa fa-circle-o"></i>Меню</a></li>
-                    <li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+                    <li class="active">
+                        <a href="<?= $baseUrl ?>/admin/menu"><i class="fa fa-circle-o">
+                            </i>Роли</a>
+                    </li>
+                    <li>
+                        <a href="<?= $baseUrl ?>/department/index"><i class="fa fa-circle-o">
+                            </i>Факультеты</a>
+                    </li>
+                    <li>
+                        <a href="<?= $baseUrl ?>/cathedra/index"><i class="fa fa-circle-o">
+                            </i>Кафедры</a>
+                    </li>
+                    <li>
+                        <a href="<?= $baseUrl ?>/functionuser/index"><i class="fa fa-circle-o">
+                            </i>Должности</a>
+                    </li>
                 </ul>
             </li>
 
@@ -56,11 +70,14 @@ use yii\helpers\Html;
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-files-o"></i>
-                    <span>Layout Options</span>
+                    <span>Факультеты</span>
                     <span class="label label-primary pull-right">4</span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
+                    <li>
+                        <a href="pages/layout/top-nav.html"><i class="fa fa-circle-o">
+                            </i> Top Navigation</a>
+                    </li>
                     <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
                     <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
                     <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
